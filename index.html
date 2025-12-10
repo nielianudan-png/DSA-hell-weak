@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSA FINALS WEBSITE</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    font-family: 'Roboto', sans-serif;
+    margin:0;
+    padding:0;
+    background: linear-gradient(120deg, #1f1c2c, #928dab);
+    color: #fff;
+}
+header {
+    background: rgba(0,0,0,0.8);
+    padding: 20px;
+    text-align:center;
+}
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    color:#ffcc00;
+}
+nav ul {
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    padding:0;
+}
+nav ul li a {
+    color:#ffcc00;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:18px;
+}
+nav ul li a:hover { color:#fff; }
+section {
+    margin:30px auto;
+    padding:20px;
+    max-width:800px;
+    background: rgba(0,0,0,0.6);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+h2 {
+    color:#ffcc00;
+    font-family: 'Montserrat', sans-serif;
+    text-align:center;
+    margin-bottom:20px;
+}
+.algorithm, .pseudocode, .ds {
+    margin: 15px 0;
+    padding: 15px;
+    border-radius:10px;
+    background: rgba(255,255,255,0.1);
+}
+.pseudocode pre {
+    background: rgba(0,0,0,0.3);
+    padding:15px;
+    border-radius:10px;
+    overflow-x:auto;
+    color:#00ffcc;
+    font-family: 'Courier New', monospace;
+}
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+.input-group input {
+    flex: 1;
+    padding:5px;
+    border-radius:5px;
+    border:none;
+}
+.input-group button {
+    flex: 0 0 auto;
+    padding:5px 10px;
+    border-radius:5px;
+    border:none;
+    cursor:pointer;
+    background:#ffcc00;
+    color:black;
+}
+.input-group button:hover {
+    background:#fff200;
+}
+.output {
+    margin-top:10px;
+    color:#ffcc00;
+    font-weight:bold;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>DSA FINALS WEBSITE</h1>
+<nav>
+<ul>
+<li><a href="#algorithms">Algorithms</a></li>
+<li><a href="#pseudocode">Pseudocode</a></li>
+<li><a href="#data-structures">Data Structures</a></li>
+</ul>
+</nav>
+</header>
+
+<!-- ALGORITHMS -->
+<section id="algorithms">
+<h2>10 Algorithms</h2>
+
+<div class="algorithm">
+<strong>1. Sum of Array</strong>
+<div class="input-group">
+<input type="text" id="sumArrayInput" placeholder="Enter numbers separated by commas">
+<button onclick="sumArray()">Run</button>
+</div>
+<div id="sumArrayOutput" class="output"></div>
+</div>
+
+<div class="algorithm">
+<strong>2. Factorial</strong>
+<div class="input-group">
+<input type="text" id="factorialInput" placeholder="Enter a number">
+<button onclick="factorial()">Run</button>
+</div>
+<div id="factorialOutput" class="output"></div>
+</div>
+
+<div class="algorithm">
+<strong>3. Fibonacci Series</strong>
+<div class="input-group">
+<input type="text" id="fibInput" placeholder="Enter number of terms">
+<button onclick="fibonacci()">Run</button>
+</div>
+<div id="fibOutput" class="output"></div>
+</div>
+
+<div class="algorithm">
+<strong>4. Linear Search</strong>
+<div class="input-group">
+<input type="text" id="linearArray" placeholder="Enter array numbers">
+<input type="text" id="linearTarget" placeholder="Enter target number">
+<button onclick="linearSearch()">Run</button>
+</div>
+<div id="linearOutput" class="output"></div>
+</div>
+
+<div class="algorithm">
+<strong>5. Bubble Sort</strong>
+<div class="input-group">
+<input type="text" id="bubbleInput" placeholder="Enter array numbers">
+<button onclick="bubbleSort()">Run</button>
+</div>
+<div id="bubbleOutput" class="output"></div>
+</div>
+
+<div class="algorithm">
+<strong>6. Binary Search</strong>
+<div class="input-group">
+<input type="text" id="binaryArray" placeholder="Enter sorted array numbers">
+<input type="text" id="binaryTarget" placeholder="Enter target number">
+<button onclick="binarySearch()">Run</button>
+</div>
+<div id="binaryOutput" class="output"></div>
+</div>
+
+<div class="algorithm">
+<strong>7. GCD (Euclidean)</strong>
+<div class="input-group">
+<input type="text" id="gcdA" placeholder="Enter first number">
+<input type="text" id="gcdB" placeholder="Enter second number">
+<button onclick="gcd()">Run</button>
+</div>
+<div id="gcdOutput" class="output"></div>
+</div>
+
+<div class="algorithm">
+<strong>8. Reverse String</strong>
+<div class="input-group">
+<input type="text" id="revString" placeholder="Enter a string">
+<button onclick="reverseString()">Run</button>
+</div>
+<div id="revOutput" class="output"></div>
+</div>
+
+<div class="algorithm">
+<strong>9. Prime Check</strong>
+<div class="input-group">
+<input type="text" id="primeInput" placeholder="Enter a number">
+<button onclick="primeCheck()">Run</button>
+</div>
+<div id="primeOutput" class="output"></div>
+</div>
+
+<div class="algorithm">
+<strong>10. Decimal to Binary</strong>
+<div class="input-group">
+<input type="text" id="decInput" placeholder="Enter decimal number">
+<button onclick="decToBin()">Run</button>
+</div>
+<div id="decOutput" class="output"></div>
+</div>
+
+</section>
+
+<!-- PSEUDOCODE -->
+<section id="pseudocode">
+<h2>10 Pseudocode Examples</h2>
+
+<div class="pseudocode"><pre>1. Sum of Array: 
+START
+sum = 0
+FOR each element in array
+    sum += element
+PRINT sum
+END</pre></div>
+
+<div class="pseudocode"><pre>2. Factorial: 
+START
+result = 1
+FOR i = 1 TO n
+    result *= i
+PRINT result
+END</pre></div>
+
+<div class="pseudocode"><pre>3. Fibonacci: 
+START
+a = 0, b = 1
+FOR i = 1 TO n
+    PRINT a
+    temp = a + b
+    a = b
+    b = temp
+END</pre></div>
+
+<div class="pseudocode"><pre>4. Linear Search: 
+START
+FOR i in array
+    IF array[i] == target
+        RETURN i
+RETURN -1
+END</pre></div>
+
+<div class="pseudocode"><pre>5. Bubble Sort: 
+START
+FOR i = 0 TO n-1
+    FOR j = 0 TO n-i-1
+        IF array[j] > array[j+1]
+            SWAP array[j] and array[j+1]
+END</pre></div>
+
+<div class="pseudocode"><pre>6. Binary Search: 
+START
+low = 0, high = n-1
+WHILE low <= high
+    mid = (low + high)/2
+    IF array[mid] == target
+        RETURN mid
+    ELSE IF array[mid] < target
+        low = mid + 1
+    ELSE
+        high = mid - 1
+RETURN -1
+END</pre></div>
+
+<div class="pseudocode"><pre>7. GCD: 
+START
+WHILE b != 0
+    a, b = b, a % b
+PRINT a
+END</pre></div>
+
+<div class="pseudocode"><pre>8. Reverse String: 
+START
+reversed = ''
+FOR char FROM end TO start
+    append char to reversed
+PRINT reversed
+END</pre></div>
+
+<div class="pseudocode"><pre>9. Prime Check: 
+START
+IF n < 2
+    RETURN FALSE
+FOR i = 2 TO sqrt(n)
+    IF n % i == 0
+        RETURN FALSE
+RETURN TRUE
+END</pre></div>
+
+<div class="pseudocode"><pre>10. Decimal to Binary: 
+START
+binary = ''
+WHILE n > 0
+    binary = n % 2 + binary
+    n = n / 2
+PRINT binary
+END</pre></div>
+
+</section>
+
+<!-- DATA STRUCTURES -->
+<section id="data-structures">
+<h2>Data Structures</h2>
+
+<div class="ds">
+<strong>Array</strong>
+<div class="input-group">
+<input type="text" id="arrayInput" placeholder="Enter numbers separated by commas">
+<button onclick="showArray()">Run</button>
+</div>
+<div id="arrayOutput" class="output"></div>
+</div>
+
+<div class="ds">
+<strong>Stack (Push/Pop)</strong>
+<div class="input-group">
+<input type="text" id="stackInput" placeholder="Enter numbers separated by commas">
+<button onclick="showStack()">Run</button>
+</div>
+<div id="stackOutput" class="output"></div>
+</div>
+
+<div class="ds">
+<strong>Queue (Enqueue/Dequeue)</strong>
+<div class="input-group">
+<input type="text" id="queueInput" placeholder="Enter numbers separated by commas">
+<button onclick="showQueue()">Run</button>
+</div>
+<div id="queueOutput" class="output"></div>
+</div>
+
+<div class="ds">
+<strong>Tree (Preorder, Inorder, Postorder)</strong>
+<div class="input-group">
+<input type="text" id="treeInput" placeholder="Enter numbers separated by commas">
+<button onclick="showTree()">Run</button>
+</div>
+<div id="treeOutput" class="output"></div>
+</div>
+
+</section>
+
+<footer style="text-align:center; padding:20px; background:rgba(0,0,0,0.7);">
+<p>&copy; 2025 DSA FINALS WEBSITE</p>
+</footer>
+
+<script>
+// Algorithms JS
+function sumArray(){
+    let nums = document.getElementById('sumArrayInput').value.split(',').map(x=>parseInt(x.trim())).filter(x=>!isNaN(x));
+    document.getElementById('sumArrayOutput').innerHTML = "Sum: "+nums.reduce((a,b)=>a+b,0);
+}
+function factorial(){
+    let n = parseInt(document.getElementById('factorialInput').value);
+    let res = 1;
+    for(let i=1;i<=n;i++) res*=i;
+    document.getElementById('factorialOutput').innerHTML = res;
+}
+function fibonacci(){
+    let n = parseInt(document.getElementById('fibInput').value);
+    let arr = [0,1];
+    for(let i=2;i<n;i++) arr.push(arr[i-1]+arr[i-2]);
+    document.getElementById('fibOutput').innerHTML = arr.slice(0,n).join(', ');
+}
+function linearSearch(){
+    let arr = document.getElementById('linearArray').value.split(',').map(x=>parseInt(x.trim()));
+    let target = parseInt(document.getElementById('linearTarget').value);
+    let idx = arr.indexOf(target);
+    document.getElementById('linearOutput').innerHTML = (idx>=0) ? "Found at index "+idx : "Not found";
+}
+function bubbleSort(){
+    let arr = document.getElementById('bubbleInput').value.split(',').map(x=>parseInt(x.trim()));
+    for(let i=0;i<arr.length;i++){
+        for(let j=0;j<arr.length-i-1;j++){
+            if(arr[j]>arr[j+1]){
+                [arr[j],arr[j+1]]=[arr[j+1],arr[j]];
+            }
+        }
+    }
+    document.getElementById('bubbleOutput').innerHTML = arr.join(', ');
+}
+function binarySearch(){
+    let arr = document.getElementById('binaryArray').value.split(',').map(x=>parseInt(x.trim()));
+    let target = parseInt(document.getElementById('binaryTarget').value);
+    let low=0,high=arr.length-1,found=-1;
+    while(low<=high){
+        let mid=Math.floor((low+high)/2);
+        if(arr[mid]===target){found=mid;break;}
+        else if(arr[mid]<target) low=mid+1;
+        else high=mid-1;
+    }
+    document.getElementById('binaryOutput').innerHTML = (found>=0) ? "Found at index "+found : "Not found";
+}
+function gcd(){
+    let a = parseInt(document.getElementById('gcdA').value);
+    let b = parseInt(document.getElementById('gcdB').value);
+    while(b!=0){ [a,b]=[b,a%b]; }
+    document.getElementById('gcdOutput').innerHTML = a;
+}
+function reverseString(){
+    let s=document.getElementById('revString').value;
+    document.getElementById('revOutput').innerHTML = s.split('').reverse().join('');
+}
+function primeCheck(){
+    let n=parseInt(document.getElementById('primeInput').value);
+    if(n<2){document.getElementById('primeOutput').innerHTML="Not prime"; return;}
+    for(let i=2;i<=Math.sqrt(n);i++){ if(n%i==0){document.getElementById('primeOutput').innerHTML="Not prime"; return;}}
+    document.getElementById('primeOutput').innerHTML="Prime";
+}
+function decToBin(){
+    let n=parseInt(document.getElementById('decInput').value);
+    document.getElementById('decOutput').innerHTML = n.toString(2);
+}
+
+// Data Structures JS
+function showArray(){
+    let arr = document.getElementById('arrayInput').value.split(',').map(x=>parseInt(x.trim()));
+    document.getElementById('arrayOutput').innerHTML="Array: "+arr.join(', ');
+}
+function showStack(){
+    let stack = document.getElementById('stackInput').value.split(',').map(x=>parseInt(x.trim()));
+    let output="Initial Stack: "+stack.join(', ');
+    if(stack.length>0){
+        let popped = stack.pop();
+        output+="<br>After pop: "+stack.join(', ')+", Popped value: "+popped;
+    }
+    document.getElementById('stackOutput').innerHTML=output;
+}
+function showQueue(){
+    let queue = document.getElementById('queueInput').value.split(',').map(x=>parseInt(x.trim()));
+    let output="Initial Queue: "+queue.join(', ');
+    if(queue.length>0){
+        let dequeued = queue.shift();
+        output+="<br>After dequeue: "+queue.join(', ')+", Dequeued value: "+dequeued;
+    }
+    document.getElementById('queueOutput').innerHTML=output;
+}
+function showTree(){
+    let values=document.getElementById('treeInput').value.split(',').map(x=>parseInt(x.trim()));
+    if(values.length==0){document.getElementById('treeOutput').innerHTML=""; return;}
+    function inorder(idx){ if(idx>=values.length) return []; return [...inorder(2*idx+1),values[idx],...inorder(2*idx+2)]; }
+    function preorder(idx){ if(idx>=values.length) return []; return [values[idx], ...preorder(2*idx+1), ...preorder(2*idx+2)]; }
+    function postorder(idx){ if(idx>=values.length) return []; return [...postorder(2*idx+1), ...postorder(2*idx+2), values[idx]]; }
+    document.getElementById('treeOutput').innerHTML = 
+        "Inorder: "+inorder(0).join(', ') + "<br>" +
+        "Preorder: "+preorder(0).join(', ') + "<br>" +
+        "Postorder: "+postorder(0).join(', ');
+}
+</script>
+
+</body>
+</html>
